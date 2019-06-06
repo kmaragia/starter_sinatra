@@ -1,0 +1,14 @@
+
+<form action="/bankaccounts/<%= @bankaccount.id%>" method="post">
+  <input type="hidden" name="_method" value="PUT">
+    <label for="bank"> Enter Bank</label>
+     <input type="text" name="bank" value="<%= @bankaccount.bank%>">
+     <select name="user" selected="@bankaccount.user.id">
+       <% User.all.each do |user|%>
+         <option value="<%= user.id%>"><%=user.name%></option>
+       <% end %>
+     </select>
+     <input type="submit" value="Submit">
+
+
+</form>

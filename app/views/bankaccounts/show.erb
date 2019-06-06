@@ -1,0 +1,8 @@
+<a href="/bankaccounts">home</a>
+<a href="/users/<%= @bankaccount.user.id %>"><h1><%= @bankaccount.user.name %></h1></a>
+<h1><%= @bankaccount.bank %></h1>
+<form  action="/bankaccounts/<%=@bankaccount.id%>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="<%=@bankaccount.id%>" value="delete">
+
+</form>

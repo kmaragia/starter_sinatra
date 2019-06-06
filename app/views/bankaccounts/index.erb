@@ -1,0 +1,15 @@
+<title>Home</title>
+
+
+<ul>
+
+<% @bankaccounts.each do |account|%>
+  <li>
+    <a href="/bankaccounts/<%=account.id%>">
+    <%= account.user.name %>
+    <%= account.bank %>
+    </a>
+  </li>
+<% end %>
+
+</ul>
